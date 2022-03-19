@@ -29,7 +29,7 @@ const searchByName = (obj) => {
 const infoEmployee = (obj) => {
   let result;
   if (!obj) {
-    return 'Deu certo';
+    return 'Empty parameter';
   }
   if (typeIdentification(obj) === 'name') {
     result = searchByName(obj);
@@ -88,10 +88,5 @@ function getEmployeesCoverage(identification) {
 
   return data.employees.map((person) => personResult(person));
 }
-// console.log(getEmployeesCoverage());
-// console.log(getEmployeesCoverage({ name: 'Sharonda' }));
-// console.log(getEmployeesCoverage({ name: 'Spry' }));
-// console.log(getEmployeesCoverage({ id: '4b40a139-d4dc-4f09-822d-ec25e819a5ad' }));
-// console.log(getEmployeesCoverage({ id: 'Id inválido' }));
 
 module.exports = getEmployeesCoverage;
